@@ -1,4 +1,4 @@
-// mousetrail.js - Mouse trail effect for all pages
+// mousetrail.js - Glowing neon streak trail effect for all pages
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.createElement('canvas');
@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(canvas);
 
     const ctx = canvas.getContext('2d');
-    let particles = [];
+    const points = [];
+    const maxPoints = 20; // Number of points in the trail
+    const trailLength = 100; // Length of the trail in pixels
 
     // Set canvas size
     function resizeCanvas() {
@@ -22,52 +24,60 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle class
-    class Particle {
-        constructor(x, y) {
-            this.x = x;
-            this.y = y;
-            this.size = Math.random() * 5 + 2;
-            this.speedX = Math.random() * 2 - 1;
-            this.speedY = Math.random() * 2 - 1;
-            this.opacity = 1;
-            this.color = `hsl(${Math.random() * 60 + 180}, 100%, 50%)`; // Neon blue to purple gradient
-        }
-
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-            this.opacity -= 0.02;
-            this.size *= 0.98;
-        }
-
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.globalAlpha = this.opacity;
-            ctx.fill();
-            ctx.globalAlpha = 1;
-        }
-    }
+    // Store mouse position
+    let mouseX = 0;
+    let mouseY = 0;
 
     // Handle mouse movement
     document.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        for (let i = 0; i < 2; i++) {
-            particles.push(new Particle(x, y));
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        points.push({ x: mouseX, y: mouseY, time: Date.now() });
+        if (points.length > maxPoints) {
+            points.shift();
         }
     });
 
     // Animation loop
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles = particles.filter(p => p.opacity > 0 && p.size > 0.1);
-        particles.forEach(p => {
-            p.update();
-            p.draw();
-        });
+
+        // Draw glowing streak
+        if (points.length > 1) {
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(0, 255, 255, 0.8)'; // Neon cyan base
+            ctx.lineWidth = 4;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Create gradient along the trail
+            const gradient = ctx.createLinearGradient(points[0].x, points[0].y, mouseX, mouseY);
+            gradient.addColorStop(0, 'rgba(0, 255, 255, 0)'); // Fade out at tail
+            gradient.addColorStop(1, 'rgba(128, 0, 255, 0.8)'); // Neon purple at head
+            ctx.strokeStyle = gradient;
+
+            // Draw smooth curve through points
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                const xc = (points[i - 1].x + points[i].x) / 2;
+                const yc = (points[i - 1].y + points[i].y) / 2;
+                ctx.quadraticCurveTo(points[i - 1].x, points[i - 1].y, xc, yc);
+            }
+            ctx.stroke();
+
+            // Add glow effect
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = 'rgba(0, 255, 255, 0.5)';
+            ctx.stroke();
+            ctx.shadowBlur = 0; // Reset to avoid affecting other drawings
+        }
+
+        // Remove old points to create fading effect
+        const now = Date.now();
+        while (points.length > 0 && now - points[0].time > 500) {
+            points.shift(); // Remove points older than 500ms
+        }
+
         requestAnimationFrame(animate);
     }
     animate();
