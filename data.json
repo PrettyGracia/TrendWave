@@ -3,51 +3,87 @@
         {
             "title": "Review: Latest AI Chatbot Site",
             "excerpt": "An in-depth look at the new AI-powered chatbot platform revolutionizing customer service.",
-            "link": "/reviews/ai-chatbot.html"
+            "link": "/reviews/ai-chatbot.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=AI+Chatbot",
+            "category": "Technology",
+            "author": "Jane Doe",
+            "date": "2025-09-01"
         },
         {
             "title": "Review: E-commerce Giant Update",
             "excerpt": "How the recent updates have improved user experience on this popular shopping site.",
-            "link": "/reviews/ecommerce-update.html"
+            "link": "/reviews/ecommerce-update.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=E-commerce+Update",
+            "category": "Business",
+            "author": "John Smith",
+            "date": "2025-09-03"
         },
         {
             "title": "Review: Social Media Innovator",
             "excerpt": "Breaking down the features of a rising social platform challenging the big players.",
-            "link": "/reviews/social-innovator.html"
+            "link": "/reviews/social-innovator.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Social+Innovator",
+            "category": "Social Media",
+            "author": "Alex Johnson",
+            "date": "2025-09-05"
         }
     ],
     "blogs": [
         {
             "title": "The Future of Web Design in 2025",
             "excerpt": "Exploring emerging trends in UI/UX that will shape the web.",
-            "link": "/blog/future-web-design.html"
+            "link": "/blog/future-web-design.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Web+Design+2025",
+            "category": "Design",
+            "author": "Emily Davis",
+            "date": "2025-09-02"
         },
         {
             "title": "Why Privacy Matters Online",
             "excerpt": "A deep dive into data protection and user rights in the digital age.",
-            "link": "/blog/privacy-online.html"
+            "link": "/blog/privacy-online.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Online+Privacy",
+            "category": "Security",
+            "author": "Michael Brown",
+            "date": "2025-09-04"
         },
         {
             "title": "Top Gadgets for Content Creators",
             "excerpt": "Must-have tools for bloggers and reviewers in 2025.",
-            "link": "/blog/top-gadgets.html"
+            "link": "/blog/top-gadgets.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Top+Gadgets",
+            "category": "Gadgets",
+            "author": "Sarah Wilson",
+            "date": "2025-09-06"
         }
     ],
     "trending": [
         {
             "title": "AI Breakthrough in Healthcare",
             "excerpt": "New AI model predicts diseases with 99% accuracy.",
-            "link": "/trending/ai-healthcare.html"
+            "link": "/trending/ai-healthcare.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=AI+Healthcare",
+            "category": "Health",
+            "author": "David Lee",
+            "date": "2025-09-01"
         },
         {
             "title": "Crypto Market Surge",
             "excerpt": "Bitcoin hits all-time high amid regulatory changes.",
-            "link": "/trending/crypto-surge.html"
+            "link": "/trending/crypto-surge.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Crypto+Surge",
+            "category": "Finance",
+            "author": "Olivia Martinez",
+            "date": "2025-09-03"
         },
         {
             "title": "Space Tourism Takes Off",
             "excerpt": "First civilian mission to Mars announced.",
-            "link": "/trending/space-tourism.html"
+            "link": "/trending/space-tourism.html",
+            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Space+Tourism",
+            "category": "Space",
+            "author": "James Garcia",
+            "date": "2025-09-05"
         }
     ]
 }

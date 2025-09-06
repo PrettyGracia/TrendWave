@@ -11,44 +11,43 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading data:', error));
 });
 
+function createCard(item) {
+    const card = document.createElement('div');
+    card.className = 'bg-gradient-to-br from-cyan-900 to-purple-900 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all overflow-hidden';
+    card.innerHTML = `
+        <a href="${item.link}">
+            <img src="${item.featured_image}" alt="${item.title}" class="w-full h-48 object-cover">
+        </a>
+        <div class="p-6">
+            <span class="inline-block bg-cyan-500 text-white text-xs px-2 py-1 rounded-full mb-2">${item.category}</span>
+            <a href="${item.link}">
+                <h3 class="text-2xl font-semibold mb-2 hover:text-cyan-400">${item.title}</h3>
+            </a>
+            <p class="text-sm text-gray-300 mb-4">By ${item.author} on ${item.date}</p>
+            <p class="mb-4">${item.excerpt}</p>
+            <a href="${item.link}" class="inline-block bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-4 py-2 rounded-full hover:from-cyan-500 hover:to-purple-600 transition-all">Read More</a>
+        </div>
+    `;
+    return card;
+}
+
 function populateReviews(reviews) {
     const container = document.getElementById('reviews-container');
     reviews.forEach(review => {
-        const card = document.createElement('div');
-        card.className = 'bg-gradient-to-br from-cyan-900 to-purple-900 p-6 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all';
-        card.innerHTML = `
-            <h3 class="text-2xl font-semibold mb-2">${review.title}</h3>
-            <p class="mb-4">${review.excerpt}</p>
-            <a href="${review.link}" class="text-cyan-400 hover:text-purple-400">Read Review</a>
-        `;
-        container.appendChild(card);
+        container.appendChild(createCard(review));
     });
 }
 
 function populateBlogs(blogs) {
     const container = document.getElementById('blog-container');
     blogs.forEach(blog => {
-        const card = document.createElement('div');
-        card.className = 'bg-gradient-to-br from-cyan-900 to-purple-900 p-6 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all';
-        card.innerHTML = `
-            <h3 class="text-2xl font-semibold mb-2">${blog.title}</h3>
-            <p class="mb-4">${blog.excerpt}</p>
-            <a href="${blog.link}" class="text-cyan-400 hover:text-purple-400">Read Blog</a>
-        `;
-        container.appendChild(card);
+        container.appendChild(createCard(blog));
     });
 }
 
 function populateTrending(trending) {
     const container = document.getElementById('trending-container');
     trending.forEach(news => {
-        const card = document.createElement('div');
-        card.className = 'bg-gradient-to-br from-cyan-900 to-purple-900 p-6 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all';
-        card.innerHTML = `
-            <h3 class="text-2xl font-semibold mb-2">${news.title}</h3>
-            <p class="mb-4">${news.excerpt}</p>
-            <a href="${news.link}" class="text-cyan-400 hover:text-purple-400">Read News</a>
-        `;
-        container.appendChild(card);
+        container.appendChild(createCard(news));
     });
 }
