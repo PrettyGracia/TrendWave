@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     header.className = 'bg-gradient-to-r from-cyan-500 to-purple-500 py-4 px-6 shadow-md';
     header.innerHTML = `
         <div class="flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold glitch" data-text="TrendWave">TrendWave</a>
+            <a href="https://prettygracia.github.io/TrendWave/" class="text-2xl font-bold glitch" data-text="TrendWave">TrendWave</a>
             <nav id="desktop-nav" class="hidden md:flex space-x-4">
                 <a href="#reviews" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Reviews</a>
                 <a href="#blog" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Blog</a>
