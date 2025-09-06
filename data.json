@@ -1,7 +1,7 @@
 {
     "reviews": [
         {
-            "link": "/reviews/ai-chatbot.html",
+            "link": "https://prettygracia.github.io/TrendWave/reviews/ai-chatbot.html",
             "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=AI+Chatbot",
             "category": "Technology",
             "date": "2025-09-01"
@@ -21,7 +21,7 @@
     ],
     "blogs": [
         {
-            "link": "/blog/future-web-design.html",
+            "link": "https://prettygracia.github.io/TrendWave/blog/future-web-design.html",
             "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Web+Design+2025",
             "category": "Design",
             "date": "2025-09-02"
@@ -41,7 +41,7 @@
     ],
     "trending": [
         {
-            "link": "/trending/ai-healthcare.html",
+            "link": "https://prettygracia.github.io/TrendWave/trending/ai-healthcare.html",
             "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=AI+Healthcare",
             "category": "Health",
             "date": "2025-09-01"
