@@ -1,53 +1,66 @@
-// scripts.js - Handle data loading and population
+async function fetchPostDetails(link) {
+    try {
+        const response = await fetch(link);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        
+        // Extract title, excerpt, and author from the post page
+        // Assumes post pages have <h1> for title, <meta name="description"> for excerpt, and <meta name="author"> for author
+        const title = doc.querySelector('h1')?.textContent || 'Untitled';
+        const excerpt = doc.querySelector('meta[name="description"]')?.content || 'No excerpt available';
+        const author = doc.querySelector('meta[name="author"]')?.content || 'Unknown Author';
+        
+        return { title, excerpt, author };
+    } catch (error) {
+        console.error(`Error fetching details for ${link}:`, error);
+        return {
+            title: 'Error Loading Title',
+            excerpt: 'Could not load excerpt.',
+            author: 'Unknown'
+        };
+    }
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            populateReviews(data.reviews);
-            populateBlogs(data.blogs);
-            populateTrending(data.trending);
-        })
-        .catch(error => console.error('Error loading data:', error));
-});
-
-function createCard(item) {
+async function createCard(item) {
+    const postDetails = await fetchPostDetails(item.link);
     const card = document.createElement('div');
     card.className = 'bg-gradient-to-br from-cyan-900 to-purple-900 rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all overflow-hidden';
     card.innerHTML = `
         <a href="${item.link}">
-            <img src="${item.featured_image}" alt="${item.title}" class="w-full h-48 object-cover">
+            <img src="${item.featured_image}" alt="${postDetails.title}" class="w-full h-48 object-cover">
         </a>
         <div class="p-6">
             <span class="inline-block bg-cyan-500 text-white text-xs px-2 py-1 rounded-full mb-2">${item.category}</span>
             <a href="${item.link}">
-                <h3 class="text-2xl font-semibold mb-2 hover:text-cyan-400">${item.title}</h3>
+                <h3 class="text-2xl font-semibold mb-2 hover:text-cyan-400">${postDetails.title}</h3>
             </a>
-            <p class="text-sm text-gray-300 mb-4">By ${item.author} on ${item.date}</p>
-            <p class="mb-4">${item.excerpt}</p>
+            <p class="text-sm text-gray-300 mb-4">By ${postDetails.author} on ${item.date}</p>
+            <p class="mb-4">${postDetails.excerpt}</p>
             <a href="${item.link}" class="inline-block bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-4 py-2 rounded-full hover:from-cyan-500 hover:to-purple-600 transition-all">Read More</a>
         </div>
     `;
     return card;
 }
 
-function populateReviews(reviews) {
-    const container = document.getElementById('reviews-container');
-    reviews.forEach(review => {
-        container.appendChild(createCard(review));
-    });
+async function populateSection(containerId, items) {
+    const container = document.getElementById(containerId);
+    for (const item of items) {
+        const card = await createCard(item);
+        container.appendChild(card);
+    }
 }
 
-function populateBlogs(blogs) {
-    const container = document.getElementById('blog-container');
-    blogs.forEach(blog => {
-        container.appendChild(createCard(blog));
-    });
-}
-
-function populateTrending(trending) {
-    const container = document.getElementById('trending-container');
-    trending.forEach(news => {
-        container.appendChild(createCard(news));
-    });
-}
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('data.json');
+        const data = await response.json();
+        await Promise.all([
+            populateSection('reviews-container', data.reviews),
+            populateSection('blog-container', data.blogs),
+            populateSection('trending-container', data.trending)
+        ]);
+    } catch (error) {
+        console.error('Error loading data:', error);
+    }
+});
