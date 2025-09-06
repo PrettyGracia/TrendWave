@@ -1,0 +1,53 @@
+{
+    "reviews": [
+        {
+            "title": "Review: Latest AI Chatbot Site",
+            "excerpt": "An in-depth look at the new AI-powered chatbot platform revolutionizing customer service.",
+            "link": "/reviews/ai-chatbot.html"
+        },
+        {
+            "title": "Review: E-commerce Giant Update",
+            "excerpt": "How the recent updates have improved user experience on this popular shopping site.",
+            "link": "/reviews/ecommerce-update.html"
+        },
+        {
+            "title": "Review: Social Media Innovator",
+            "excerpt": "Breaking down the features of a rising social platform challenging the big players.",
+            "link": "/reviews/social-innovator.html"
+        }
+    ],
+    "blogs": [
+        {
+            "title": "The Future of Web Design in 2025",
+            "excerpt": "Exploring emerging trends in UI/UX that will shape the web.",
+            "link": "/blog/future-web-design.html"
+        },
+        {
+            "title": "Why Privacy Matters Online",
+            "excerpt": "A deep dive into data protection and user rights in the digital age.",
+            "link": "/blog/privacy-online.html"
+        },
+        {
+            "title": "Top Gadgets for Content Creators",
+            "excerpt": "Must-have tools for bloggers and reviewers in 2025.",
+            "link": "/blog/top-gadgets.html"
+        }
+    ],
+    "trending": [
+        {
+            "title": "AI Breakthrough in Healthcare",
+            "excerpt": "New AI model predicts diseases with 99% accuracy.",
+            "link": "/trending/ai-healthcare.html"
+        },
+        {
+            "title": "Crypto Market Surge",
+            "excerpt": "Bitcoin hits all-time high amid regulatory changes.",
+            "link": "/trending/crypto-surge.html"
+        },
+        {
+            "title": "Space Tourism Takes Off",
+            "excerpt": "First civilian mission to Mars announced.",
+            "link": "/trending/space-tourism.html"
+        }
+    ]
+}
