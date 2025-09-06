@@ -1,0 +1,74 @@
+/* Custom CSS for glitching animation */
+.glitch {
+    position: relative;
+    color: white;
+    animation: glitch 1s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 cyan;
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 purple;
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% { clip: rect(0, 9999px, 0, 0); }
+    5% { clip: rect(20px, 9999px, 40px, 0); transform: skew(0.91deg); }
+    10% { clip: rect(50px, 9999px, 70px, 0); transform: skew(0.35deg); }
+    15% { clip: rect(80px, 9999px, 100px, 0); transform: skew(0.8deg); }
+    20% { clip: rect(110px, 9999px, 130px, 0); transform: skew(0.2deg); }
+    25% { clip: rect(140px, 9999px, 160px, 0); transform: skew(0.91deg); }
+    30% { clip: rect(170px, 9999px, 190px, 0); transform: skew(0.35deg); }
+    35% { clip: rect(200px, 9999px, 220px, 0); transform: skew(0.8deg); }
+    40% { clip: rect(230px, 9999px, 250px, 0); transform: skew(0.2deg); }
+    45% { clip: rect(260px, 9999px, 280px, 0); transform: skew(0.91deg); }
+    50% { clip: rect(290px, 9999px, 310px, 0); transform: skew(0.35deg); }
+    55% { clip: rect(320px, 9999px, 340px, 0); transform: skew(0.8deg); }
+    60% { clip: rect(350px, 9999px, 370px, 0); transform: skew(0.2deg); }
+    65% { clip: rect(380px, 9999px, 400px, 0); transform: skew(0.91deg); }
+    70% { clip: rect(410px, 9999px, 430px, 0); transform: skew(0.35deg); }
+    75% { clip: rect(440px, 9999px, 460px, 0); transform: skew(0.8deg); }
+    80% { clip: rect(470px, 9999px, 490px, 0); transform: skew(0.2deg); }
+    85% { clip: rect(500px, 9999px, 520px, 0); transform: skew(0.91deg); }
+    90% { clip: rect(530px, 9999px, 550px, 0); transform: skew(0.35deg); }
+    95% { clip: rect(560px, 9999px, 580px, 0); transform: skew(0.8deg); }
+    100% { clip: rect(590px, 9999px, 610px, 0); transform: skew(0.2deg); }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Additional custom styles if needed */
+a {
+    text-decoration: underline;
+    color: cyan;
+}
+
+a:hover {
+    color: purple;
+}
