@@ -1,3 +1,6 @@
+body {
+    touch-action: auto;
+}
 /* Custom CSS for glitching animation */
 .glitch {
     position: relative;
