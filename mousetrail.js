@@ -1,4 +1,4 @@
-// mousetrail.js - Glowing neon streak trail effect for all pages, including mobile
+// mousetrail.js - Glowing neon streak trail effect for all pages, including mobile with scrolling
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.createElement('canvas');
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle touch movement for mobile
     document.addEventListener('touchmove', (e) => {
-        e.preventDefault(); // Prevent scrolling while touching
         const touch = e.touches[0];
         currentX = touch.clientX;
         currentY = touch.clientY;
@@ -48,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (points.length > maxPoints) {
             points.shift();
         }
-    }, { passive: false });
+        // Do not call e.preventDefault() to allow scrolling
+    }, { passive: true }); // Use passive: true to ensure scrolling is not blocked
 
     // Animation loop
     function animate() {
