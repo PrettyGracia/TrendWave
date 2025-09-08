@@ -1,4 +1,4 @@
-// mousetrail.js - Glowing neon streak trail effect for all pages
+// mousetrail.js - Glowing neon streak trail effect for all pages, including mobile
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.createElement('canvas');
@@ -24,19 +24,31 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Store mouse position
-    let mouseX = 0;
-    let mouseY = 0;
+    // Store position (mouse or touch)
+    let currentX = 0;
+    let currentY = 0;
 
     // Handle mouse movement
     document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        points.push({ x: mouseX, y: mouseY, time: Date.now() });
+        currentX = e.clientX;
+        currentY = e.clientY;
+        points.push({ x: currentX, y: currentY, time: Date.now() });
         if (points.length > maxPoints) {
             points.shift();
         }
     });
+
+    // Handle touch movement for mobile
+    document.addEventListener('touchmove', (e) => {
+        e.preventDefault(); // Prevent scrolling while touching
+        const touch = e.touches[0];
+        currentX = touch.clientX;
+        currentY = touch.clientY;
+        points.push({ x: currentX, y: currentY, time: Date.now() });
+        if (points.length > maxPoints) {
+            points.shift();
+        }
+    }, { passive: false });
 
     // Animation loop
     function animate() {
@@ -51,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.lineJoin = 'round';
 
             // Create gradient along the trail
-            const gradient = ctx.createLinearGradient(points[0].x, points[0].y, mouseX, mouseY);
+            const gradient = ctx.createLinearGradient(points[0].x, points[0].y, currentX, currentY);
             gradient.addColorStop(0, 'rgba(0, 255, 255, 0)'); // Fade out at tail
             gradient.addColorStop(1, 'rgba(128, 0, 255, 0.8)'); // Neon purple at head
             ctx.strokeStyle = gradient;
