@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="flex justify-between items-center">
             <a href="/" class="text-2xl font-bold glitch" data-text="TrendWave">TrendWave</a>
             <nav id="desktop-nav" class="hidden md:flex space-x-4">
-                <a href="#reviews" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Reviews</a>
-                <a href="#blog" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Blog</a>
-                <a href="#trending" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Trending</a>
+                <a href="/reviews" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Reviews</a>
+                <a href="/blog" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Blog</a>
+                <a href="/trending" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Trending</a>
                 <a href="#contact" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Contact</a>
             </nav>
             <button id="hamburger" class="md:hidden text-white text-3xl focus:outline-none">☰</button>
         </div>
         <nav id="mobile-nav" class="hidden md:hidden flex flex-col space-y-2 mt-4 px-4">
-            <a href="#reviews" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Reviews</a>
-            <a href="#blog" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Blog</a>
-            <a href="#trending" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Trending</a>
+            <a href="/reviews" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Reviews</a>
+            <a href="/blog" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Blog</a>
+            <a href="/trending" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Trending</a>
             <a href="#contact" class="px-3 py-2 rounded hover:bg-cyan-600 hover:text-white transition-all">Contact</a>
         </nav>
     `;
