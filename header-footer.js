@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Add global click listener for all internal links
+    document.addEventListener('click', handleLinkClick);
+
     // Create Header
     const header = document.getElementById('header');
     header.className = 'bg-gradient-to-r from-cyan-500 to-purple-500 py-4 px-6 shadow-md';
@@ -54,9 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.textContent = mobileNav.classList.contains('hidden') ? '☰' : '✕';
     });
 
-    // Add click listeners to all links in header for preloader
-    header.addEventListener('click', handleLinkClick);
-
     // Create Footer
     const footer = document.getElementById('footer');
     footer.className = 'bg-gradient-to-r from-cyan-500 to-purple-500 py-4 px-6 text-center';
@@ -68,7 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="https://linkedin.com" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">LinkedIn</a>
         </div>
     `;
-
-    // Add click listeners to footer links if needed
-    footer.addEventListener('click', handleLinkClick);
 });
