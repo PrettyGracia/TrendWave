@@ -21,10 +21,10 @@
     ],
     "blogs": [
         {
-            "link": "/blog/future-web-design",
-            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Web+Design+2025",
-            "category": "Design",
-            "date": "2025-09-02"
+            "link": "/blog/tropical-storm-nando-philippines",
+            "featured_image": "/images/tropical-storm-nando-philippines.webp",
+            "category": "News",
+            "date": "2025-09-20"
         },
         {
             "link": "/blog/privacy-online.html",
@@ -41,10 +41,10 @@
     ],
     "trending": [
         {
-            "link": "https://prettygracia.github.io/TrendWave/trending/ai-healthcare.html",
-            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=AI+Healthcare",
+            "link": "/trending/tropical-storm-nando-philippines",
+            "featured_image": "/images/tropical-storm-nando-philippines.webp",
             "category": "Health",
-            "date": "2025-09-01"
+            "date": "2025-09-20"
         },
         {
             "link": "/trending/crypto-surge.html",
