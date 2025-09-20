@@ -1,6 +1,29 @@
 // header-footer.js - Dynamically insert header and footer
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Create Preloader
+    const preloader = document.createElement('div');
+    preloader.id = 'preloader';
+    preloader.className = 'fixed inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-500';
+    preloader.innerHTML = `
+        <p class="text-4xl font-bold glitch" data-text="Loading...">Loading...</p>
+    `;
+    document.body.appendChild(preloader);
+
+    // Function to handle link clicks with preloader
+    function handleLinkClick(e) {
+        const link = e.target.closest('a');
+        if (link && link.href.startsWith(window.location.origin + '/') && !link.href.includes('#')) {
+            e.preventDefault();
+            const href = link.href;
+            preloader.classList.remove('hidden', 'opacity-0');
+            preloader.classList.add('opacity-100');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500); // Delay to allow transition
+        }
+    }
+
     // Create Header
     const header = document.getElementById('header');
     header.className = 'bg-gradient-to-r from-cyan-500 to-purple-500 py-4 px-6 shadow-md';
@@ -31,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.textContent = mobileNav.classList.contains('hidden') ? '☰' : '✕';
     });
 
+    // Add click listeners to all links in header for preloader
+    header.addEventListener('click', handleLinkClick);
+
     // Create Footer
     const footer = document.getElementById('footer');
     footer.className = 'bg-gradient-to-r from-cyan-500 to-purple-500 py-4 px-6 text-center';
@@ -42,4 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="https://linkedin.com" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">LinkedIn</a>
         </div>
     `;
+
+    // Add click listeners to footer links if needed
+    footer.addEventListener('click', handleLinkClick);
 });
