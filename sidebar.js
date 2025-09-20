@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Recent Posts (top 5)
         const recent = detailedItems.slice(0, 5);
-        let recentHTML = '<h3 class="text-xl font-bold mb-4">Recent Posts</h3><ul class="space-y-2">';
+        let recentHTML = '<h3 class="text-xl font-bold mb-4">Recent Posts</h3><ul class="space-y-4">';
         recent.forEach(item => {
-            recentHTML += `<li><a href="${item.link}" class="hover:text-cyan-400">${item.title}</a><br><small class="text-gray-300">${item.date}</small></li>`;
+            recentHTML += `<li class="flex items-start"><img src="${item.featured_image}" alt="${item.title}" class="w-12 h-12 object-cover rounded mr-3"><div><a href="${item.link}" class="hover:text-cyan-400">${item.title}</a><br><small class="text-gray-300">${item.date}</small></div></li>`;
         });
         recentHTML += '</ul>';
 
@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         categoriesHTML += '</ul>';
 
         // Archive (all posts)
-        let archiveHTML = '<h3 class="text-xl font-bold mb-4 mt-6">Archive</h3><ul class="space-y-2">';
+        let archiveHTML = '<h3 class="text-xl font-bold mb-4 mt-6">Archive</h3><ul class="space-y-4">';
         detailedItems.forEach(item => {
-            archiveHTML += `<li><a href="${item.link}" class="hover:text-cyan-400">${item.title}</a> - <small class="text-gray-300">${item.date}</small></li>`;
+            archiveHTML += `<li class="flex items-start"><img src="${item.featured_image}" alt="${item.title}" class="w-12 h-12 object-cover rounded mr-3"><div><a href="${item.link}" class="hover:text-cyan-400">${item.title}</a> - <small class="text-gray-300">${item.date}</small></div></li>`;
         });
         archiveHTML += '</ul>';
 
