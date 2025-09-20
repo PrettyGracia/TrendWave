@@ -2,9 +2,9 @@
     "reviews": [
         {
             "link": "/reviews/review-myndworks-psychiatry-website",
-            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=AI+Chatbot",
+            "featured_image": "/images/review-myndworks-psychiatry-website.webp",
             "category": "Health",
-            "date": "2025-09-18"
+            "date": "2025-09-20"
         },
         {
             "link": "/reviews/ecommerce-update.html",
