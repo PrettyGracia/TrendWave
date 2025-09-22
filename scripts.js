@@ -1,3 +1,5 @@
+// scripts.js - Handle data loading and population
+
 async function fetchPostDetails(link) {
     try {
         const response = await fetch(link);
@@ -44,6 +46,9 @@ async function createCard(item) {
 }
 
 async function populateSection(containerId, items) {
+    // Sort items by date descending (latest first)
+    items.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     const container = document.getElementById(containerId);
     for (const item of items) {
         const card = await createCard(item);
