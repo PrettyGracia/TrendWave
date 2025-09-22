@@ -41,7 +41,7 @@
     <script src="header-footer.js"></script>
     <script src="mousetrail.js"></script>
     <script>
-        async function fetchPostDetails(link) {
+       async function fetchPostDetails(link) {
             try {
                 const response = await fetch(link);
                 const text = await response.text();
@@ -87,6 +87,9 @@
         }
 
         async function populateSection(containerId, items) {
+            // Sort items by date descending (latest first)
+            items.sort((a, b) => new Date(b.date) - new Date(a.date));
+
             const container = document.getElementById(containerId);
             for (const item of items) {
                 const card = await createCard(item);
@@ -98,7 +101,7 @@
             try {
                 const response = await fetch('data.json');
                 const data = await response.json();
-                await populateSection('reviews-container', data.reviews);
+                await populateSection('trending-container', data.trending);
             } catch (error) {
                 console.error('Error loading data:', error);
             }
