@@ -101,7 +101,7 @@
             try {
                 const response = await fetch('data.json');
                 const data = await response.json();
-                await populateSection('trending-container', data.trending);
+                await populateSection('reviews-container', data.trending);
             } catch (error) {
                 console.error('Error loading data:', error);
             }
