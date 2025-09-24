@@ -13,10 +13,10 @@
             "date": "2025-09-22"
         },
         {
-            "link": "/reviews/social-innovator.html",
-            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Social+Innovator",
-            "category": "Social Media",
-            "date": "2025-09-05"
+            "link": "/reviews/review-first-class-legal.html",
+            "featured_image": "/images/review-first-class-legal.webp",
+            "category": "Legal",
+            "date": "2025-09-24"
         }
     ],
     "blogs": [
@@ -33,10 +33,10 @@
             "date": "2025-09-22"
         },
         {
-            "link": "/blog/top-gadgets.html",
-            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Top+Gadgets",
-            "category": "Gadgets",
-            "date": "2025-09-06"
+            "link": "/blog/sarah-geronimo-comeback-concert-philippines.html",
+            "featured_image": "/images/sarah-geronimo-comeback-concert-philippines.webp",
+            "category": "Music",
+            "date": "2025-09-24"
         }
     ],
     "trending": [
@@ -49,14 +49,14 @@
         {
             "link": "/trending/september-2025-philippine-protests",
             "featured_image": "/images/september-2025-philippine-protests.webp",
-            "category": "Finance",
+            "category": "Human Rights",
             "date": "2025-09-22"
         },
         {
-            "link": "/trending/space-tourism.html",
-            "featured_image": "https://via.placeholder.com/400x200/00FFFF/800080?text=Space+Tourism",
-            "category": "Space",
-            "date": "2025-09-05"
+            "link": "/trending/sara-duterte-icc-claims-philippines.html",
+            "featured_image": "/images/sara-duterte-icc-claims-philippines.webp",
+            "category": "Politics",
+            "date": "2025-09-24"
         }
     ]
 }
