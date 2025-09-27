@@ -17,6 +17,12 @@
             "featured_image": "/images/review-first-class-legal.webp",
             "category": "Legal",
             "date": "2025-09-24"
+        },
+        {
+            "link": "/reviews/review-slotscam-website",
+            "featured_image": "/images/review-slotscam-website.webp",
+            "category": "Entertainment",
+            "date": "2025-09-26"
         }
     ],
     "blogs": [
@@ -37,6 +43,12 @@
             "featured_image": "/images/sarah-geronimo-comeback-concert-philippines.webp",
             "category": "Music",
             "date": "2025-09-24"
+        },
+        {
+            "link": "/blog/opm-rise-2025-philippines",
+            "featured_image": "/images/opm-rise-2025-philippines.webp",
+            "category": "Music",
+            "date": "2025-09-26"
         }
     ],
     "trending": [
@@ -57,6 +69,12 @@
             "featured_image": "/images/sara-duterte-icc-claims-philippines.webp",
             "category": "Politics",
             "date": "2025-09-24"
+        },
+        {
+            "link": "/trending/typhoon-ragasa-philippines-2025",
+            "featured_image": "/images/typhoon-ragasa-philippines-2025.webp",
+            "category": "News",
+            "date": "2025-09-26"
         }
     ]
 }
