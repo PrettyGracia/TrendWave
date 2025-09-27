@@ -49,8 +49,11 @@ async function populateSection(containerId, items) {
     // Sort items by date descending (latest first)
     items.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+    // Take only the 3 latest items
+    const latestItems = items.slice(0, 3);
+
     const container = document.getElementById(containerId);
-    for (const item of items) {
+    for (const item of latestItems) {
         const card = await createCard(item);
         container.appendChild(card);
     }
