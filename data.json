@@ -23,6 +23,12 @@
             "featured_image": "/images/review-slotscam-website.webp",
             "category": "Entertainment",
             "date": "2025-09-26"
+        },
+        {
+            "link": "/reviews/review-fuseven-net",
+            "featured_image": "/images/review-fuseven-net.webp",
+            "category": "Informative",
+            "date": "2025-11-14"
         }
     ],
     "blogs": [
@@ -49,6 +55,12 @@
             "featured_image": "/images/opm-rise-2025-philippines.webp",
             "category": "Music",
             "date": "2025-09-26"
+        },
+        {
+            "link": "/blog/philippine-economy-2025-outlook",
+            "featured_image": "/images/philippine-economy-2025-outlook.webp",
+            "category": "Informative",
+            "date": "2025-11-14"
         }
     ],
     "trending": [
@@ -75,6 +87,12 @@
             "featured_image": "/images/typhoon-ragasa-philippines-2025.webp",
             "category": "News",
             "date": "2025-09-26"
+        },
+        {
+            "link": "/trending/juan-ponce-enrile-passes-away-philippines",
+            "featured_image": "/images/juan-ponce-enrile-passes-away-philippines.webp",
+            "category": "News",
+            "date": "2025-11-14"
         }
     ]
 }
