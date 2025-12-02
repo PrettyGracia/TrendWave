@@ -29,6 +29,12 @@
             "featured_image": "/images/review-fuseven-net.webp",
             "category": "Informative",
             "date": "2025-11-14"
+        },
+        {
+            "link": "/reviews/review-bloofy-net",
+            "featured_image": "/images/review-bloofy-net.webp",
+            "category": "Informative",
+            "date": "2025-12-02"
         }
     ],
     "blogs": [
@@ -61,6 +67,12 @@
             "featured_image": "/images/philippine-economy-2025-outlook.webp",
             "category": "Informative",
             "date": "2025-11-14"
+        },
+        {
+            "link": "/blog/christmas-traditions-philippines-2025",
+            "featured_image": "/images/christmas-traditions-philippines-2025.webp",
+            "category": "Informative",
+            "date": "2025-12-02"
         }
     ],
     "trending": [
@@ -93,6 +105,12 @@
             "featured_image": "/images/juan-ponce-enrile-passes-away-philippines.webp",
             "category": "News",
             "date": "2025-11-14"
+        },
+        {
+            "link": "/trending/2025-mama-vote-trending-philippines",
+            "featured_image": "/images/2025-mama-vote-trending-philippines.webp",
+            "category": "Entertainment",
+            "date": "2025-12-02"
         }
     ]
 }
