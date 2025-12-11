@@ -63,9 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.innerHTML = `
         <p>&copy; 2025 TrendWave. All rights reserved.</p>
         <div class="space-x-4 mt-2">
-            <a href="https://twitter.com" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">Twitter</a>
-            <a href="https://instagram.com" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">Instagram</a>
-            <a href="https://linkedin.com" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">LinkedIn</a>
+            <a href="https://fuseven.net/" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">Fuseven</a>
+            <a href="https://stars777.win/" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">Stars777</a>
+            <a href="https://bloofy.net/" class="px-3 py-1 rounded hover:bg-cyan-600 hover:text-white transition-all">Bloofy</a>
         </div>
     `;
 });
