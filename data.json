@@ -41,6 +41,12 @@
             "featured_image": "/images/review-nashvilleexperiencetours-com.webp",
             "category": "Travel",
             "date": "2025-12-08"
+        },
+        {
+            "link": "/reviews/review-stars777-org",
+            "featured_image": "/images/review-stars777-org.webp",
+            "category": "Entertainment",
+            "date": "2025-12-12"
         }
     ],
     "blogs": [
@@ -85,6 +91,12 @@
             "featured_image": "/images/new-year-traditions-philippines-2025.webp",
             "category": "Entertainment",
             "date": "2025-12-08"
+        },
+        {
+            "link": "/blog/lol-esports-philippines-2025",
+            "featured_image": "/images/lol-esports-philippines-2025.webp",
+            "category": "Games",
+            "date": "2025-12-12"
         }
     ],
     "trending": [
@@ -129,6 +141,12 @@
             "featured_image": "/images/gemini-ai-trending-philippines-2025.webp",
             "category": "Technology",
             "date": "2025-12-08"
+        },
+        {
+            "link": "/trending/bsp-rate-cut-trending-philippines",
+            "featured_image": "/images/bsp-rate-cut-trending-philippines.webp",
+            "category": "Economy",
+            "date": "2025-12-12"
         }
     ]
 }
