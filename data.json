@@ -53,6 +53,12 @@
             "featured_image": "/images/review-nurumassage-ph.webp",
             "category": "Health",
             "date": "2025-12-18"
+        },
+        {
+            "link": "/reviews/review-axeholenpr-com",
+            "featured_image": "/images/review-axeholenpr-com.webp",
+            "category": "Sports",
+            "date": "2025-12-27"
         }
     ],
     "blogs": [
@@ -109,6 +115,12 @@
             "featured_image": "/images/anime-like-chainsaw-man-movie-2025.webp",
             "category": "Anime",
             "date": "2025-12-18"
+        },
+        {
+            "link": "/blog/sustainable-fashion-philippines-2025",
+            "featured_image": "/images/sustainable-fashion-philippines-2025.webp",
+            "category": "Fashion",
+            "date": "2025-12-27"
         }
     ],
     "trending": [
@@ -165,6 +177,12 @@
             "featured_image": "/images/uaap-basketball-2025-philippines.webp",
             "category": "Sports",
             "date": "2025-12-18"
+        },
+        {
+            "link": "/trending/p500-noche-buena-ideas-philippines-2025",
+            "featured_image": "/images/p500-noche-buena-ideas-philippines-2025.webp",
+            "category": "Economy",
+            "date": "2025-12-27"
         }
     ]
 }
