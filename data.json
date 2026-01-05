@@ -59,6 +59,12 @@
             "featured_image": "/images/review-axeholenpr-com.webp",
             "category": "Sports",
             "date": "2025-12-27"
+        },
+        {
+            "link": "/reviews/review-fuseven-net-rebranding",
+            "featured_image": "/images/review-fuseven-net-rebranding.webp",
+            "category": "Informative",
+            "date": "2026-01-05"
         }
     ],
     "blogs": [
@@ -121,6 +127,12 @@
             "featured_image": "/images/sustainable-fashion-philippines-2025.webp",
             "category": "Fashion",
             "date": "2025-12-27"
+        },
+        {
+            "link": "/blog/ai-impact-philippine-jobs-2026",
+            "featured_image": "/images/ai-impact-philippine-jobs-2026.webp",
+            "category": "Technology",
+            "date": "2026-01-05"
         }
     ],
     "trending": [
@@ -183,6 +195,12 @@
             "featured_image": "/images/p500-noche-buena-ideas-philippines-2025.webp",
             "category": "Economy",
             "date": "2025-12-27"
+        },
+        {
+            "link": "/trending/us-venezuela-conflict-trending-philippines",
+            "featured_image": "/images/us-venezuela-conflict-trending-philippines.webp",
+            "category": "Politics",
+            "date": "2026-01-05"
         }
     ]
 }
