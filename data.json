@@ -65,6 +65,12 @@
             "featured_image": "/images/review-fuseven-net-rebranding.webp",
             "category": "Informative",
             "date": "2026-01-05"
+        },
+        {
+            "link": "/reviews/review-blogger-com",
+            "featured_image": "/images/review-blogger-com.webp",
+            "category": "Informative",
+            "date": "2026-01-12"
         }
     ],
     "blogs": [
@@ -133,6 +139,12 @@
             "featured_image": "/images/ai-impact-philippine-jobs-2026.webp",
             "category": "Technology",
             "date": "2026-01-05"
+        },
+        {
+            "link": "/blog/pba-basketball-trends-philippines-2026",
+            "featured_image": "/images/pba-basketball-trends-philippines-2026.webp",
+            "category": "Sports",
+            "date": "2026-01-12"
         }
     ],
     "trending": [
@@ -201,6 +213,12 @@
             "featured_image": "/images/us-venezuela-conflict-trending-philippines.webp",
             "category": "Politics",
             "date": "2026-01-05"
+        },
+        {
+            "link": "/trending/people-we-meet-on-vacation-movie-trending-philippines",
+            "featured_image": "/images/people-we-meet-on-vacation-movie-trending-philippines.webp",
+            "category": "Entertainment",
+            "date": "2026-01-12"
         }
     ]
 }
